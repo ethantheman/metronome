@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<script src="scripts/jquery.js"></script>
+		<script src="scripts/metronome.js"></script>
+		<style>
+			#tempo{
+				display: block;
+				width: 25%;
+				height: 50px;
+				margin: 0 auto;
+				background: #d8d8d8;
+				text-align: center;
+			}
+
+			.slider{
+				-webkit-appearance: none;  /* Override default CSS styles */
+			    width: 100%; /* Full-width */
+			    height: 15px; /* Specified height */
+			    border-radius: 5px;
+			    background: #d3d3d3; /* Grey background */
+			    outline: none; /* Remove outline */
+			    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+			    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+			    transition: opacity .2s;
+			}
+
+			.slider:hover {
+				opacity: 1;
+			}
+
+			/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */
+			.slider::-webkit-slider-thumb {
+			    -webkit-appearance: none; /* Override default look */
+			    appearance: none;
+			    width: 25px; /* Set a specific slider handle width */
+			    height: 25px; /* Slider handle height */
+			    background: #4CAF50; /* Green background */
+			    cursor: pointer; /* Cursor on hover */
+			}
+
+			.slider::-moz-range-thumb {
+			    width: 25px; /* Set a specific slider handle width */
+			    height: 25px; /* Slider handle height */
+			    background: #4CAF50; /* Green background */
+			    cursor: pointer; /* Cursor on hover */
+			}
+
+			#play {
+				margin: 0 auto;
+				top: 25%;
+				position: relative;  
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 2.5em 0 2.5em 5em;
+				border-color: transparent transparent transparent #000;
+				opacity: .75; 
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="slide_container">
+			<input type="range" min="40" max="210" value="100" class="slider">
+		</div>
+		<br>
+		<button id="play"></button>
+		<br>
+		<div id="tempo"></div>
+		<audio id="click" src="Click_1.wav"></audio>
+	</body>
+</html>
