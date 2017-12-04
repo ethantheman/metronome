@@ -5,11 +5,14 @@
 		<style>
 			#tempo{
 				display: block;
-				width: 25%;
+				padding-top: 50px;
+				width: 100px;
 				height: 50px;
 				margin: 0 auto;
 				background: #d8d8d8;
 				text-align: center;
+				font-family: "Helvetica";
+				font-weight: bold;
 			}
 
 			.slider{
@@ -45,16 +48,24 @@
 			    cursor: pointer; /* Cursor on hover */
 			}
 
+			#buttons {
+				float: center;
+				display: block;
+				margin: auto;
+			}
+
 			#play {
-				margin: 0 auto;
-				top: 25%;
-				position: relative;  
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 2.5em 0 2.5em 5em;
-				border-color: transparent transparent transparent #000;
-				opacity: .75; 
+				width: 100px;
+				height: 100px;
+				cursor: pointer;
+				margin: auto;
+			}
+
+			#pause {
+				width: 100px;
+				height: 100px;
+				cursor: pointer;
+				margin: auto;
 			}
 
 		</style>
@@ -64,9 +75,12 @@
 			<input type="range" min="40" max="210" value="100" class="slider">
 		</div>
 		<br>
-		<button id="play"></button>
-		<br>
 		<div id="tempo"></div>
+		<div id="buttons">
+			<img id="play" src="play.png"></img>
+			<img id="pause" src="pause.png"></img>
+		</div>
+		<br>
 		<audio id="click" src="Click_1.wav"></audio>
 	</body>
 </html>
